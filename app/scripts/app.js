@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('daysofsunApp', [])
+angular.module('daysOfSun', [])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

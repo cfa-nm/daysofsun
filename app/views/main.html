@@ -1,9 +1,18 @@
-<div class="hero-unit">
-  <h1>'Allo, 'Allo!</h1>
-  <p>You now have</p>
-  <ul>
-      <li ng-repeat="thing in awesomeThings">{{thing}}</li>
-  </ul>
-  <p>installed.</p>
-  <h3>Enjoy coding! - Yeoman</h3>
-</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th>Clear</th>
+      <th>Partly Cloudy</th>
+      <th>Cloudy</th>
+    </tr>
+  </thead>
+  </tbody>
+    <tr ng-repeat="(name, types) in data">
+      <td>{{name}}</td>
+      <td>{{types.clear}}</td>
+      <td>{{types.partlyCloudy}}</td>
+      <td>{{types.cloudy}}</td>
+    </tr>
+  </tbody>
+</table>
