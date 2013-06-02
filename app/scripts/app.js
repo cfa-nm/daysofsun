@@ -3,11 +3,11 @@
 angular.module('daysOfSun', [])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
+      .when('/:city', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/ABQ'
       });
-  });
+  }).constant('WU_KEY', 'b57f2267e5844afe');
