@@ -1,0 +1,19 @@
+{
+  "ABQ": {
+    "2012": {
+      "year": { "clear": 167, "partlyCloudy": 111, "cloudy": 87 },
+      "jan":  { "clear": 13,  "partlyCloudy": 8,   "cloudy": 10 },
+      "feb":  { "clear": 11,  "partlyCloudy": 8,   "cloudy": 10 },
+      "mar":  { "clear": 11,  "partlyCloudy": 10,  "cloudy": 10 },
+      "apr":  { "clear": 13,  "partlyCloudy": 10,  "cloudy": 8  },
+      "may":  { "clear": 14,  "partlyCloudy": 10,  "cloudy": 7  },
+      "jun":  { "clear": 17,  "partlyCloudy": 9,   "cloudy": 4  },
+      "jul":  { "clear": 12,  "partlyCloudy": 14,  "cloudy": 5  },
+      "aug":  { "clear": 13,  "partlyCloudy": 13,  "cloudy": 5  },
+      "sep":  { "clear": 17,  "partlyCloudy": 8,   "cloudy": 6  },
+      "oct":  { "clear": 17,  "partlyCloudy": 8,   "cloudy": 6  },
+      "nov":  { "clear": 15,  "partlyCloudy": 8,   "cloudy": 7  },
+      "dec":  { "clear": 14,  "partlyCloudy": 7,   "cloudy": 10 }
+    }
+  }
+}
