@@ -1,0 +1,15 @@
+h2 It is currently {{ currentConditions }}
+
+table.table
+  thead
+    tr
+      th Month
+      th Clear
+      th Partly Cloudy
+      th Cloudy
+  tbody
+    tr(ng-repeat="(name, types) in data")
+      td {{name}}
+      td {{types.clear}}
+      td {{types.partlyCloudy}}
+      td {{types.cloudy}}
