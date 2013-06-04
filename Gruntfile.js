@@ -29,6 +29,10 @@ module.exports = function (grunt) {
         files: ['test/spec/{,*/}*.coffee'],
         tasks: ['coffee:test']
       },
+      less: {
+        files: ['<%= yeoman.app %>/styles/{,*/}*.less'],
+        tasks: ['less:dist']
+      },
       jade: {
         files: ['<%= yeoman.app %>/views/{,*/}*.jade'],
         tasks: ['jade:dist']
@@ -121,6 +125,20 @@ module.exports = function (grunt) {
           src: '{,*/}*.coffee',
           dest: '.tmp/spec',
           ext: '.js'
+        }]
+      }
+    },
+    less: {
+      dist: {
+        options: {
+          paths: ['.', '<%= yeoman.app %>/components/bootstrap/less']
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.app %>/styles',
+          src: '{,*/}*.less',
+          dest: '.tmp/styles',
+          ext: '.css'
         }]
       }
     },
@@ -262,6 +280,7 @@ module.exports = function (grunt) {
   grunt.registerTask('server', [
     'clean:server',
     'coffee:dist',
+    'less:dist',
     'jade:dist',
     'livereload-start',
     'connect:livereload',
@@ -272,6 +291,7 @@ module.exports = function (grunt) {
   grunt.registerTask('test', [
     'clean:server',
     'coffee',
+    'less',
     'jade',
     'connect:test',
     'karma'
@@ -282,6 +302,7 @@ module.exports = function (grunt) {
     'jshint',
     'test',
     'coffee',
+    'less',
     'jade',
     'useminPrepare',
     'imagemin',

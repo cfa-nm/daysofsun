@@ -1,17 +1,22 @@
-h2 It is currently {{ currentConditions }}
+.row
+  .span12
+    h1.text-center It is currently {{ currentConditions }}
 
-skycon(width=64, height=64, type="conditionIcon")
+.row
+  .span6
+    skycon(width=460, height=460, type="conditionIcon")
 
-table.table
-  thead
-    tr
-      th Month
-      th Clear
-      th Partly Cloudy
-      th Cloudy
-  tbody
-    tr(ng-repeat="(name, types) in data")
-      td {{name}}
-      td {{types.clear}}
-      td {{types.partlyCloudy}}
-      td {{types.cloudy}}
+  .span6
+    table.table
+      thead
+        tr
+          th Month
+          th Clear
+          th Partly Cloudy
+          th Cloudy
+      tbody
+        tr(ng-repeat="(name, types) in data")
+          td {{name}}
+          td {{types.clear}}
+          td {{types.partlyCloudy}}
+          td {{types.cloudy}}
