@@ -26,7 +26,7 @@ module.exports = function (grunt) {
         tasks: ['coffee:dist']
       },
       coffeeTest: {
-        files: ['test/spec/{,*/}*.coffee'],
+        files: ['test/*/{,*/}*.coffee'],
         tasks: ['coffee:test']
       },
       less: {
@@ -106,6 +106,10 @@ module.exports = function (grunt) {
       unit: {
         configFile: 'karma.conf.js',
         singleRun: true
+      },
+      e2e: {
+        configFile: 'karma-e2e.conf.js',
+        singleRun: true
       }
     },
     coffee: {
@@ -121,9 +125,9 @@ module.exports = function (grunt) {
       test: {
         files: [{
           expand: true,
-          cwd: 'test/spec',
-          src: '{,*/}*.coffee',
-          dest: '.tmp/spec',
+          cwd: 'test',
+          src: '*/{,*/}*.coffee',
+          dest: '.tmp/test',
           ext: '.js'
         }]
       }
@@ -294,7 +298,16 @@ module.exports = function (grunt) {
     'less',
     'jade',
     'connect:test',
-    'karma'
+    'karma:unit'
+  ]);
+
+  grunt.registerTask('test:e2e', [
+    'clean:server',
+    'coffee',
+    'less',
+    'jade',
+    'connect:test',
+    'karma:e2e'
   ]);
 
   grunt.registerTask('build', [

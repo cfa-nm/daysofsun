@@ -7,7 +7,8 @@ basePath = '';
 files = [
   ANGULAR_SCENARIO,
   ANGULAR_SCENARIO_ADAPTER,
-  'test/e2e/**/*.js'
+  'test/e2e/**/*.js',
+  '.tmp/test/e2e/**/*.js'
 ];
 
 // list of files to exclude
@@ -41,7 +42,7 @@ autoWatch = false;
 // - Safari (only Mac)
 // - PhantomJS
 // - IE (only Windows)
-browsers = ['Chrome'];
+browsers = ['PhantomJS'];
 
 // If browser does not capture in given timeout [ms], kill it
 captureTimeout = 5000;
