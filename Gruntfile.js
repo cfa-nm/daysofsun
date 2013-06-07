@@ -135,7 +135,11 @@ module.exports = function (grunt) {
     less: {
       dist: {
         options: {
-          paths: ['.', '<%= yeoman.app %>/components/bootstrap/less']
+          paths: [
+            '.',
+            '<%= yeoman.app %>/styles',
+            '<%= yeoman.app %>/components/bootstrap/less'
+          ]
         },
         files: [{
           expand: true,

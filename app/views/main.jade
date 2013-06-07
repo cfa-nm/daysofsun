@@ -7,16 +7,4 @@
     skycon(width=460, height=460, type="conditionIcon")
 
   .span6
-    table.table
-      thead
-        tr
-          th Month
-          th Clear
-          th Partly Cloudy
-          th Cloudy
-      tbody
-        tr(ng-repeat="(name, types) in data")
-          td {{name}}
-          td {{types.clear}}
-          td {{types.partlyCloudy}}
-          td {{types.cloudy}}
+    barchart(data="data")
